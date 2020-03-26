@@ -106,8 +106,8 @@ endfunction
 
 function! s:tranquilize()
   let bg = s:get_color('Normal', 'bg#')
-  for grp in ['NonText', 'FoldColumn', 'ColorColumn', 'VertSplit',
-            \ 'StatusLine', 'StatusLineNC', 'SignColumn']
+  for grp in ['NonText', 'FoldColumn', 'ColorColumn',
+            \ 'StatusLineNC']
     " -1 on Vim / '' on GVim
     if bg == -1 || empty(bg)
       call s:set_color(grp, 'fg', get(g:, 'goyo_bg', 'black'))
